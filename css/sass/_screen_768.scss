@@ -170,6 +170,13 @@ div#search-container {
     margin: 0 0 rhythm(.5);
 }
 
+/* Index Page */
+
+#callout {
+    width:100%;
+    clear:both;
+}
+
 /*Search Results */
 
 #footer {
@@ -178,15 +185,24 @@ div#search-container {
 
 .featured,
 #featured-exhibit {
-    @include span-columns(8 omega, 12);
+    @include span-columns(12, 12);
     clear: right;
 }
 
-#recent-items {
-    width: columns(4);
+#featured-item .item.record {
+    @include span-columns(3, 12);
+    &:nth-child(4n) { @include omega; } 
+    height: 250px;
 }
 
-#intro {width:800px/968px * 100%;}
+#featured-collection, #featured-exhibit{
+    @include span-columns(4, 12);
+}
+#item-block {
+    @include span-columns (4 omega, 12);
+}
+
+/* #intro {width:800px/968px * 100%;} */
 
 /* Advanced Search */
 .field {

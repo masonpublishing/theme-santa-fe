@@ -1054,26 +1054,9 @@ th {
   }
 
   /* Home Page */
-  .featured,
-  #featured-exhibit {
-    border-color: #d3d6bc;
-    border-bottom-width: 0.08333em;
-    border-bottom-style: solid;
-    padding-bottom: 1.41667em;
-    margin-bottom: 1.5em;
-  }
   .featured *:last-child,
   #featured-exhibit *:last-child {
     margin-bottom: 0em;
-  }
-
-  .featured .record,
-  #featured-exhibit .exhibit {
-    border-bottom-width: 0em;
-    border-bottom-style: solid;
-    padding-bottom: 0em;
-    padding: 0;
-    overflow: visible;
   }
 
   #recent-items {
@@ -1088,6 +1071,12 @@ th {
   #intro {
     width: 100%;
     padding: 10px 0;
+  }
+
+  #featured-item .item.record {
+    border-color: #868D4A;
+    background-color: #d3d6bc;
+    padding: 1.5em 1.69492%;
   }
 
   /* Advanced Search */
@@ -1494,6 +1483,12 @@ th {
     margin: 0 0 0.75em;
   }
 
+  /* Index Page */
+  #callout {
+    width: 100%;
+    clear: both;
+  }
+
   /*Search Results */
   #footer {
     min-height: 30px;
@@ -1501,22 +1496,43 @@ th {
 
   .featured,
   #featured-exhibit {
-    width: 66.10169%;
-    float: right;
-    margin-right: 0;
-    *margin-left: -1em;
+    width: 100%;
+    float: left;
+    margin-right: 1.69492%;
     display: inline;
     clear: right;
   }
 
-  #recent-items {
+  #featured-item .item.record {
+    width: 23.72881%;
+    float: left;
+    margin-right: 1.69492%;
+    display: inline;
+    height: 250px;
+  }
+  #featured-item .item.record:nth-child(4n) {
+    float: right;
+    margin-right: 0;
+    *margin-left: -1em;
+    display: inline;
+  }
+
+  #featured-collection, #featured-exhibit {
     width: 32.20339%;
+    float: left;
+    margin-right: 1.69492%;
+    display: inline;
   }
 
-  #intro {
-    width: 82.64463%;
+  #item-block {
+    width: 32.20339%;
+    float: right;
+    margin-right: 0;
+    *margin-left: -1em;
+    display: inline;
   }
 
+  /* #intro {width:800px/968px * 100%;} */
   /* Advanced Search */
   .field {
     width: 66.10169%;
@@ -1569,5 +1585,27 @@ th {
   /* Items */
   .item-description {
     clear: none;
+  }
+}
+@media screen and (min-width: 1080px) {
+  /* Index Page */
+  #video-intro {
+    width: 66.10169%;
+    float: left;
+    margin-right: 1.69492%;
+    display: inline;
+  }
+
+  iframe {
+    width: 100%;
+    min-height: 350px;
+  }
+
+  #intro {
+    width: 32.20339%;
+    float: right;
+    margin-right: 0;
+    *margin-left: -1em;
+    display: inline;
   }
 }

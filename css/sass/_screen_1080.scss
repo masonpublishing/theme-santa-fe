@@ -1,0 +1,15 @@
+/* Index Page */
+
+#video-intro {
+    @include span-columns(8 alpha, 12);
+}
+
+
+iframe {
+    width: 100%;
+    min-height: 350px;	
+}
+
+#intro {
+    @include span-columns(4 omega, 12);
+}

@@ -580,9 +580,9 @@ body {
 
     .featured,
     #featured-exhibit {
-        border-color: $sand;
-        @include trailing-border(1px, 1, $base-font-size, solid);
-        @include trailer();
+        // border-color: $sand;
+        // @include trailing-border(1px, 1, $base-font-size, solid);
+        // @include trailer();
         
         *:last-child {
             @include trailer(0);
@@ -591,9 +591,8 @@ body {
     
     .featured .record,
     #featured-exhibit .exhibit {
-        @include trailing-border(0px, 0, $base-font-size, solid);
-        padding: 0;
-        overflow: visible;
+        // @include trailing-border(0px, 0, $base-font-size, solid);
+        // padding: 0;
     }
 
     #recent-items {
@@ -609,6 +608,11 @@ body {
     #intro {
         width:100%;
         padding:10px 0;
+    }
+    #featured-item .item.record {
+        border-color: $olive;
+        background-color: $sand;
+        padding: rhythm(1) gutter();
     }
 
     /* Advanced Search */
