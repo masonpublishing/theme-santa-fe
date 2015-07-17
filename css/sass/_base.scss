@@ -4,7 +4,7 @@
 @import "compass";
 @import "susyone";
 // @import "mixins";
-
+@import "compass/typography/lists/horizontal-list";
 
 // Grid Units
 $total-columns  : 12;
@@ -19,5 +19,6 @@ $base-font-size	: 12px;
 $base-line-height : 18px;
 
 //Colors
-$olive          : #868D4A;
-$sand           : #d3d6bc;
+$green          : #006633;
+$sand           : #D8D8C1;
+$grey			: #D1D3D5;

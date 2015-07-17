@@ -82,7 +82,7 @@ div#search-container {
     .nav-item > a {
         position: relative;
         margin: 0 0 -1px 0;
-        color:#868D4A;
+        color:$sand;
         display:block;
         float:left;
         padding:10px;
@@ -92,6 +92,7 @@ div#search-container {
        navigation item */
     .nav-item > a.open {
         background-color: #fff;
+        color: $green;
         border: 1px solid #dedede;
         border-bottom: none;
         z-index: 1;
@@ -183,24 +184,31 @@ div#search-container {
     min-height:30px;
 }
 
-.featured,
-#featured-exhibit {
-    @include span-columns(12, 12);
-    clear: right;
+/* Home Page */
+#main {
+    @include span-columns(6 alpha, 12);
 }
 
-#featured-item .item.record {
-    @include span-columns(3, 12);
-    &:nth-child(4n) { @include omega; } 
-    height: 250px;
+#recent-items {
+    @include span-columns(5 omega, 12);
+}
+
+
+#featured-collection, 
+    #featured-exhibit, 
+    #featured-item {
+        @include span-columns(4, 12);
+    }
+#featured-item {
+    margin-right: 0;
 }
 
 #featured-collection, #featured-exhibit{
-    @include span-columns(4, 12);
+    /*@include span-columns(4, 12);*/
 }
-#item-block {
+/*#item-block {
     @include span-columns (4 omega, 12);
-}
+}*/
 
 /* #intro {width:800px/968px * 100%;} */
 
@@ -250,3 +258,5 @@ div#search-container {
 /* Items */
 
 .item-description {clear:none}
+
+

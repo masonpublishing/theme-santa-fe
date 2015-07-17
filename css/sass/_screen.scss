@@ -1,17 +1,20 @@
 /* == Generic == */
-* {
+html {
     @include box-sizing(border-box);
+}
+*, *:before, *:after {
+    box-sizing: inherit;
 }
 
 body {
     font: $base-font-size Verdana, Arial, sans-serif; 
     line-height: $base-line-height;
     color:#222; 
-    background-color:#D5D2B8;
+    background-color:$grey;
 }
 
 #wrap {
-    border-top: rhythm(2) solid $olive;
+    border-top: rhythm(2) solid $green;
 }
 
     /* -- Headings -- */
@@ -38,7 +41,7 @@ body {
         font-size: 2.25 * $base-font-size;
         line-height: 2 * $base-line-height;
         color: #868D4A;
-        @include trailer(1, 2.25 * $base-font-size);
+        @include trailer(1.5); 
         font-weight: normal;
         word-wrap: break-word;
     }
@@ -69,7 +72,7 @@ body {
 
     /* -- Links -- */
     a {
-        color:#868D4A;
+        color: $green;
         text-decoration:none;
     }
 
@@ -93,7 +96,7 @@ body {
     input[type="submit"],
     .button,
     button {
-        background-color: $olive;
+        background-color: $green;
         color: #fff;
         @include appearance(none);
         line-height: rhythm(1.5);
@@ -165,6 +168,11 @@ body {
         float: left;
         border: 1px solid rgba(0,0,0,.2);
         margin: 0 rhythm(.5) rhythm(.5) 0;
+    }
+    .fullsize-image {
+        width: 80%;
+        height: auto;
+        @include box-shadow(-3px -3px 0 rgba(0,0,0,.2), -6px -6px 0 rgba(0,0,0,.1));
     }
     
     .collection .image img,
@@ -282,6 +290,13 @@ body {
     
     #outputs {
         clear: both;
+    }
+    .item-pagination {
+        @include horizontal-list-container();
+
+        li {
+            @include horizontal-list-item();
+        }
     }
 
         /* Items Classes*/
@@ -577,7 +592,14 @@ body {
     }
 
     /* Home Page */
-
+    .action {
+        padding: 1em;
+        background-color: $green;
+        color: white;
+    }
+    #featured-bar {
+        @include rhythm();
+    }
     .featured,
     #featured-exhibit {
         // border-color: $sand;
@@ -598,23 +620,57 @@ body {
     #recent-items {
         border:none;
         background-color: $sand;
+        @include rhythm();
         padding: rhythm(1) gutter();
         
         .item, .item img {
-            border-color: $olive;
+            border-color: $green;
         }
+    }
+    .featured {
+        @include rhythm();
+        img {
+            width: 100%;
+            min-height: 150px;
+        }
+    }
+
+    #main {
+        @include rhythm();
     }
 
     #intro {
         width:100%;
-        padding:10px 0;
     }
-    #featured-item .item.record {
-        border-color: $olive;
-        background-color: $sand;
-        padding: rhythm(1) gutter();
+    #callout {
+        @include rhythm();
+        iframe {
+            width: 100%;
+        }
     }
+    /*#featured-item {
+        @include rhythm();
 
+        #items-block {
+          background-color: $sand; 
+        }
+
+        .item.record {    
+            padding: rhythm(1) gutter();
+
+            .item-description {
+                display: none;
+            }
+
+            img {
+                height: 100%;
+                width: 100%;
+                padding: 1em 2em;
+                border: none;
+            }
+        }
+    }
+*/
     /* Advanced Search */
 
     #advanced-search-form {
@@ -706,6 +762,51 @@ body {
         }
     }
 
+    /* Item Show Pages */
+    #item-player iframe {
+        width: 100%;
+    }
+
+    #transcription-window {
+        @include rhythm();
+        width: 100%;
+        max-height: 360px;
+        padding: 10px;
+        overflow: scroll;
+        border-top: 3px double $grey ;
+        border-bottom: 2px solid $grey;
+        
+
+        span {
+            display: block;
+            padding-bottom: .5em;
+            border-bottom: 1px dashed $grey;
+        }
+    }
+    ::-webkit-scrollbar {
+        -webkit-appearance: none;
+        width: 7px;
+    }
+    ::-webkit-scrollbar-thumb {
+        border-radius: 4px;
+        background-color: rgba(0,0,0,.5);
+        -webkit-box-shadow: 0 0 1px rgba(255,255,255,.5);
+    }
+
+    #main-block {
+        @include rhythm();
+        #itemfiles {
+            display: block;
+            overflow: auto;
+        }
+    }
+
+    #metadata-bar {
+        padding: 1em;
+        background-color: $sand;
+    }
+    #docsviewer h2 {display: none;}
+
     /* Exhibits Pages */
     
     .browse .exhibit {
@@ -725,7 +826,7 @@ body {
         overflow: hidden;
         background-color: lighten($sand, 15%);
         margin: 0;
-        border-color: $olive;
+        border-color: $green;
         padding: 0 gutter(16);
         @include leading-border(5px, 1, $base-font-size, solid);
         @include trailing-border(1px, 1, $base-font-size, solid);
@@ -759,7 +860,7 @@ body {
             @include trailer(1, 1.25 * $base-font-size);
             @include bleed(1 of 16);
             @include trailing-border(1px, .75, 1.25 * $base-font-size, solid);
-            border-color: $olive;
+            border-color: $green;
         }
         
         & > ul {
@@ -816,7 +917,7 @@ body {
     clear:both;
     border-color: #fff;
     @include rhythm-borders(2px, .25, $base-font-size, solid);
-    background-color: $olive;
+    background-color: $green;
     overflow:hidden;
     padding: 0 gutter();
 }
