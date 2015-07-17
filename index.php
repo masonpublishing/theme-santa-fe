@@ -2,7 +2,7 @@
 
 <div id="callout">
     <div id="video-intro">
-        <iframe src="https://player.vimeo.com/video/69445362?portrait=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> <p><a href="https://vimeo.com/69445362">Adrift</a> from <a href="https://vimeo.com/simonchristen">Simon Christen</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
+        <iframe src="https://player.vimeo.com/video/69445362?portrait=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> 
     </div>
 
     <?php if (get_theme_option('Homepage Text')): ?>

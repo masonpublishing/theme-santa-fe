@@ -14,7 +14,7 @@ body {
 }
 
 #wrap {
-    border-top: rhythm(2) solid $green;
+    /*border-top: rhythm(2) solid $green;*/
 }
 
     /* -- Headings -- */
@@ -70,6 +70,14 @@ body {
         font-weight:bold;
     }
 
+    iframe {
+        border: 1.5em solid $sand;
+        @include box-shadow();
+    }
+
+    img {
+        @include box-shadow();
+    }
     /* -- Links -- */
     a {
         color: $green;
@@ -532,9 +540,12 @@ body {
 
     /* Structure */
     #content {
-        background:#fff;
+        background-color: #fafafa;
         padding: rhythm() $gutter-width;
         overflow:hidden;
+        border-color: #fff;
+        @include apply-side-rhythm-border('left', 2px, 0, $base-font-size, solid);
+        @include apply-side-rhythm-border('right', 2px, 0, $base-font-size, solid);        
         @include pie-clearfix();
 
         & > div, nav {
@@ -592,6 +603,7 @@ body {
     }
 
     /* Home Page */
+
     .action {
         padding: 1em;
         background-color: $green;
@@ -620,6 +632,7 @@ body {
     #recent-items {
         border:none;
         background-color: $sand;
+        @include box-shadow();
         @include rhythm();
         padding: rhythm(1) gutter();
         

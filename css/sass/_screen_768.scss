@@ -1,5 +1,5 @@
 #site-title {
-    width:50%;
+    @include span-columns(9 alpha, 12);
     float: left;
     text-align: left;
     padding: rhythm() 0 rhythm() $gutter-width;
@@ -13,7 +13,7 @@ div#search-container {
 }
 
 .center-div {
-    margin: 0 gutter(2);
+    margin: 0 gutter(3);
 }
 
 #header .center-div {
@@ -145,7 +145,7 @@ div#search-container {
 }
 
 #footer {
-    margin: 0 gutter(2);
+    margin: 0 gutter(3);
 }
 
 #content {

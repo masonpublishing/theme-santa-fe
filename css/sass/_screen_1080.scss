@@ -1,3 +1,10 @@
+body {
+    
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+
 /* Index Page */
 
 #video-intro {
@@ -21,6 +28,7 @@ iframe {
 
 #metadata-bar {
 	@include span-columns(4 omega, 12);
+    @include box-shadow();
 }
 
 

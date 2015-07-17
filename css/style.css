@@ -416,7 +416,7 @@ th {
   }
 
   #wrap {
-    border-top: 3em solid #006633;
+    /*border-top: rhythm(2) solid $green;*/
   }
 
   /* -- Headings -- */
@@ -469,6 +469,19 @@ th {
 
   b, strong {
     font-weight: bold;
+  }
+
+  iframe {
+    border: 1.5em solid #D8D8C1;
+    -moz-box-shadow: 0px 0px 5px #333333;
+    -webkit-box-shadow: 0px 0px 5px #333333;
+    box-shadow: 0px 0px 5px #333333;
+  }
+
+  img {
+    -moz-box-shadow: 0px 0px 5px #333333;
+    -webkit-box-shadow: 0px 0px 5px #333333;
+    box-shadow: 0px 0px 5px #333333;
   }
 
   /* -- Links -- */
@@ -1001,9 +1014,16 @@ th {
 
   /* Structure */
   #content {
-    background: #fff;
+    background-color: #fafafa;
     padding: 1.5em 1em;
     overflow: hidden;
+    border-color: #fff;
+    border-left-width: 0.16667em;
+    border-left-style: solid;
+    padding-left: -0.16667em;
+    border-right-width: 0.16667em;
+    border-right-style: solid;
+    padding-right: -0.16667em;
     *zoom: 1;
   }
   #content:after {
@@ -1113,6 +1133,9 @@ th {
   #recent-items {
     border: none;
     background-color: #D8D8C1;
+    -moz-box-shadow: 0px 0px 5px #333333;
+    -webkit-box-shadow: 0px 0px 5px #333333;
+    box-shadow: 0px 0px 5px #333333;
     margin-top: 1.5em;
     padding-top: 0em;
     padding-bottom: 0em;
@@ -1467,7 +1490,10 @@ th {
 }
 @media screen and (min-width: 768px) {
   #site-title {
-    width: 50%;
+    width: 74.57627%;
+    float: left;
+    margin-right: 1.69492%;
+    display: inline;
     float: left;
     text-align: left;
     padding: 1.5em 0 1.5em 1em;
@@ -1485,7 +1511,7 @@ th {
   }
 
   .center-div {
-    margin: 0 11.11111%;
+    margin: 0 7.14286%;
   }
 
   #header .center-div {
@@ -1606,7 +1632,7 @@ th {
   }
 
   #footer {
-    margin: 0 11.11111%;
+    margin: 0 7.14286%;
   }
 
   #content {
@@ -1740,6 +1766,11 @@ th {
   }
 }
 @media screen and (min-width: 1080px) {
+  body {
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+
   /* Index Page */
   #video-intro {
     width: 100%;
@@ -1775,6 +1806,9 @@ th {
     margin-right: 0;
     *margin-left: -1em;
     display: inline;
+    -moz-box-shadow: 0px 0px 5px #333333;
+    -webkit-box-shadow: 0px 0px 5px #333333;
+    box-shadow: 0px 0px 5px #333333;
   }
 
   #main-block {
