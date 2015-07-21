@@ -14,7 +14,7 @@ body {
 }
 
 #wrap {
-    /*border-top: rhythm(2) solid $green;*/
+    /*border-top: rhythm(2) solid $accent;*/
 }
 
     /* -- Headings -- */
@@ -40,7 +40,7 @@ body {
     h1 {
         font-size: 2.25 * $base-font-size;
         line-height: 2 * $base-line-height;
-        color: #868D4A;
+        color: $accent;
         @include trailer(1.5); 
         font-weight: normal;
         word-wrap: break-word;
@@ -71,7 +71,7 @@ body {
     }
 
     iframe {
-        border: 1.5em solid $sand;
+        // border: 1.5em solid $sand;
         @include box-shadow();
     }
 
@@ -80,12 +80,12 @@ body {
     }
     /* -- Links -- */
     a {
-        color: $green;
-        text-decoration:none;
+        color: $accent;
+        text-decoration: none;
     }
 
     a:hover {
-        text-decoration:underline;
+        text-decoration: underline;
     }
     
     /* -- Form Elements -- */
@@ -104,7 +104,7 @@ body {
     input[type="submit"],
     .button,
     button {
-        background-color: $green;
+        background-color: $accent;
         color: #fff;
         @include appearance(none);
         line-height: rhythm(1.5);
@@ -606,7 +606,7 @@ body {
 
     .action {
         padding: 1em;
-        background-color: $green;
+        background-color: $accent;
         color: white;
     }
     #featured-bar {
@@ -635,9 +635,9 @@ body {
         @include box-shadow();
         @include rhythm();
         padding: rhythm(1) gutter();
-        
-        .item, .item img {
-            border-color: $green;
+
+        .item {
+            border-bottom: 1px solid #333;
         }
     }
     .featured {
@@ -839,7 +839,7 @@ body {
         overflow: hidden;
         background-color: lighten($sand, 15%);
         margin: 0;
-        border-color: $green;
+        border-color: $accent;
         padding: 0 gutter(16);
         @include leading-border(5px, 1, $base-font-size, solid);
         @include trailing-border(1px, 1, $base-font-size, solid);
@@ -873,7 +873,7 @@ body {
             @include trailer(1, 1.25 * $base-font-size);
             @include bleed(1 of 16);
             @include trailing-border(1px, .75, 1.25 * $base-font-size, solid);
-            border-color: $green;
+            border-color: $accent;
         }
         
         & > ul {
@@ -930,14 +930,14 @@ body {
     clear:both;
     border-color: #fff;
     @include rhythm-borders(2px, .25, $base-font-size, solid);
-    background-color: $green;
+    background-color: #444;
     overflow:hidden;
     padding: 0 gutter();
 }
 #footer li {display:inline;}
 #footer .navigation li {margin-right:.5em}
-#footer a {color:#D5D2B8;}
-#footer p {color:#D5D2B8;}
+#footer a {color:$grey;}
+#footer p {color:$grey;}
 
 /* == Recaptcha == */
 
