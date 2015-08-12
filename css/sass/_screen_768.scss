@@ -149,7 +149,7 @@ div#search-container {
 }
 
 #content {
-     padding: rhythm() $gutter-width;
+     padding: rhythm(2) $gutter-width;
 }
 
 #home #content {
@@ -193,19 +193,14 @@ div#search-container {
     @include span-columns(5 omega, 12);
 }
 
-
-#featured-collection, 
-    #featured-exhibit, 
-    #featured-item {
+.featured {
         @include span-columns(4, 12);
+        min-height: 170px;
+        &:last-child {
+            margin-right: 0;
+        }
     }
-#featured-item {
-    margin-right: 0;
-}
 
-#featured-collection, #featured-exhibit{
-    /*@include span-columns(4, 12);*/
-}
 /*#item-block {
     @include span-columns (4 omega, 12);
 }*/

@@ -14,7 +14,7 @@ body {
 }
 
 #wrap {
-    /*border-top: rhythm(2) solid $accent;*/
+    border-top: rhythm(2) solid #444;
 }
 
     /* -- Headings -- */
@@ -24,12 +24,13 @@ body {
         text-align: center;
         padding: rhythm(1, 2 * $base-font-size) 0;
         padding-left: $gutter-width;
+        font-family: Georgia, serif;
         
         a {
             color: #fafafa;
             text-decoration: none;
-            font-size: 2 * $base-font-size;
-            line-height: 2 * $base-line-height;
+            font-size: 3 * $base-font-size;
+            line-height: 2.5 * $base-line-height;
         }
     }
     
@@ -41,7 +42,7 @@ body {
         font-size: 2.25 * $base-font-size;
         line-height: 2 * $base-line-height;
         color: $accent;
-        @include trailer(1.5); 
+        @include trailer(); 
         font-weight: normal;
         word-wrap: break-word;
     }
@@ -69,22 +70,15 @@ body {
     b, strong {
         font-weight:bold;
     }
-
-    iframe {
-        // border: 1.5em solid $sand;
-        @include box-shadow();
-    }
-
-    img {
-        @include box-shadow();
-    }
+  
     /* -- Links -- */
     a {
         color: $accent;
         text-decoration: none;
     }
 
-    a:hover {
+    a:hover, a:focus {
+        color: $link-accent;
         text-decoration: underline;
     }
     
@@ -542,7 +536,7 @@ body {
     #content {
         background-color: #fafafa;
         padding: rhythm() $gutter-width;
-        overflow:hidden;
+        overflow: hidden;
         border-color: #fff;
         @include apply-side-rhythm-border('left', 2px, 0, $base-font-size, solid);
         @include apply-side-rhythm-border('right', 2px, 0, $base-font-size, solid);        
@@ -570,7 +564,8 @@ body {
         @include trailing-border(2px, 0, $base-font-size, solid);
         
         ul {
-            display:none
+            display:none;
+            
         }
         select {
             width: 100%;
@@ -593,11 +588,11 @@ body {
         }
         
         a {
-            color:#686C42;
+            color:$link-accent;
         }
 
         a:hover {
-            color:#868D4A;
+            color:darken($link-accent, 10%);
             text-decoration:none;
         }
     }
@@ -610,23 +605,20 @@ body {
         color: white;
     }
     #featured-bar {
-        @include rhythm();
+        @include rhythm(2);
     }
-    .featured,
-    #featured-exhibit {
-        // border-color: $sand;
-        // @include trailing-border(1px, 1, $base-font-size, solid);
-        // @include trailer();
-        
-        *:last-child {
-            @include trailer(0);
+
+    .featured {
+        background-color: #524840;
+        padding: 10px;
+        @include box-shadow();
+        a { color: white;}
+        color: $sand;
+       .exhibit {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
         }
-    }
-    
-    .featured .record,
-    #featured-exhibit .exhibit {
-        // @include trailing-border(0px, 0, $base-font-size, solid);
-        // padding: 0;
     }
 
     #recent-items {
@@ -640,13 +632,6 @@ body {
             border-bottom: 1px solid #333;
         }
     }
-    .featured {
-        @include rhythm();
-        img {
-            width: 100%;
-            min-height: 150px;
-        }
-    }
 
     #main {
         @include rhythm();
@@ -657,33 +642,13 @@ body {
     }
     #callout {
         @include rhythm();
-        iframe {
+        video {
             width: 100%;
+            max-height: 350px;
+            background-color: #222;
         }
     }
-    /*#featured-item {
-        @include rhythm();
 
-        #items-block {
-          background-color: $sand; 
-        }
-
-        .item.record {    
-            padding: rhythm(1) gutter();
-
-            .item-description {
-                display: none;
-            }
-
-            img {
-                height: 100%;
-                width: 100%;
-                padding: 1em 2em;
-                border: none;
-            }
-        }
-    }
-*/
     /* Advanced Search */
 
     #advanced-search-form {
@@ -831,23 +796,26 @@ body {
     .exhibits #content > h1:first-of-type,
     #exhibit-blocks,
     #exhibit-page-navigation {
-        @include span-columns(9 omega);
+        @include span-columns(9 alpha);
     }
 
     #exhibit-pages {
-        width: columns(3);
+        @include span-columns(3 omega);
         overflow: hidden;
         background-color: lighten($sand, 15%);
         margin: 0;
         border-color: $accent;
-        padding: 0 gutter(16);
-        @include leading-border(5px, 1, $base-font-size, solid);
-        @include trailing-border(1px, 1, $base-font-size, solid);
+        padding: 0 2em;
+        border-top: 5px solid $accent;
+        border-bottom: 1px solid $accent;
+        /*@include leading-border(5px, 1, $base-font-size, solid);
+        @include trailing-border(1px, 1, $base-font-size, solid);*/
         
+        ul { margin: 0;}
         
         & ~ * {
-            @include span-columns(9 omega);
-            clear: right;
+            @include span-columns(9 alpha);
+            clear: left;
         }
         
         ul ul,
@@ -870,6 +838,7 @@ body {
 
         & > h4 {
             font-size: 1.25 * $base-font-size;
+            @include rhythm();
             @include trailer(1, 1.25 * $base-font-size);
             @include bleed(1 of 16);
             @include trailing-border(1px, .75, 1.25 * $base-font-size, solid);
@@ -886,6 +855,13 @@ body {
             
             & > li.current li {
                 display: block;
+            }
+        }
+
+        .nav-block {
+            .tags a{
+                display: block;
+                @extend h4;
             }
         }
     }
@@ -908,6 +884,21 @@ body {
 
     .exhibit-block {
         overflow: hidden;
+        font-size: 14px;
+        line-height: 28px;
+
+        .exhibit-items {
+            max-width: 30%;
+
+            img {
+                border: 1px solid $link-accent;
+            }
+        }
+
+        p {
+            margin-top: 0;
+        }
+
     }
     
     .exhibit-block > *:last-child {
