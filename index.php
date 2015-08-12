@@ -2,51 +2,22 @@
 
 <div id="callout">
     <div id="video-intro">
-        <iframe src="https://player.vimeo.com/video/69445362?portrait=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> 
+        <iframe src="https://player.vimeo.com/video/69445362?portrait=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+<!--         <video controls autoplay muted> 
+            <source src="files/original/26835c8683f6afcef087fe7aa5a8c34e.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video> -->
     </div>
-
-    <?php if (get_theme_option('Homepage Text')): ?>
-        <!-- <aside id="intro" role="introduction">
-            <p><?php echo get_theme_option('Homepage Text'); ?></p>
-        </aside> -->
-    <?php endif; ?>
 </div>
 
 <div id="featured-bar">
-
-<?php if (get_theme_option('Display Featured Collection') !== '0'): ?>
-<!-- Featured Collection -->
-<div id="featured-collection" class="featured">
-    <h2><?php echo __('Collections'); ?></h2>
-    <!-- <?php echo random_featured_collection(); ?> -->
-    <img src="<?php echo img('rectangle_image.png'); ?>" />
-    <p>Curabitur blandit tempus ardua ridiculus sed magna. Non equidem invideo, miror magis posuere velit aliquet.</p>
-    <a class="action" href="<?php echo  url('collections/browse');?>">Browse Collections</a>
-</div><!-- end featured collection -->
-<?php endif; ?>
-
-<!-- <?php if ((get_theme_option('Display Featured Exhibit') !== '0')
-        && plugin_is_active('ExhibitBuilder')
-        && function_exists('exhibit_builder_display_random_featured_exhibit')): ?> -->
+<h2><?php echo __('Featured Exhibits'); ?></h2>
 <!-- Featured Exhibit -->
-<!-- <?php echo exhibit_builder_display_random_featured_exhibit(); ?>
-<?php endif; ?>
--->
-
-<div id="featured-exhibit" class="featured">
-    <h2><?php echo __('Exhibits'); ?></h2>
-    <img src="<?php echo img('rectangle_image.png'); ?>" />
-    <p>Curabitur blandit tempus ardua ridiculus sed magna. Non equidem invideo, miror magis posuere velit aliquet.</p>
-    <a class="action" href="<?php echo  url('exibits');?>">Browse Exhibits</a>
-</div>
-<?php if (get_theme_option('Display Featured Item') !== '0'): ?>
-<!-- Featured Item -->
-<div id="featured-item" class="featured">
-    <h2><?php echo __('Items'); ?></h2>
-    <img src="<?php echo img('rectangle_image.png'); ?>" />
-    <p>Curabitur blandit tempus ardua ridiculus sed magna. Non equidem invideo, miror magis posuere velit aliquet.</p>
-    <a class="action" href="<?php echo  url('items/browse');?>">Browse Items</a></div><!--end featured-item-->
-<?php endif; ?>
+<?php $exhibits = exhibit_builder_recent_exhibits(3); ?>
+    <?php foreach ($exhibits as &$exhibit) {
+        print_r(display_featured_exhibits($exhibit));
+        }
+    ?>
 
 </div> <!-- end featured bar -->
 
