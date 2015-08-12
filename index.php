@@ -11,13 +11,17 @@
 </div>
 
 <div id="featured-bar">
-<h2><?php echo __('Featured Exhibits'); ?></h2>
-<!-- Featured Exhibit -->
-<?php $exhibits = exhibit_builder_recent_exhibits(3); ?>
-    <?php foreach ($exhibits as &$exhibit) {
-        print_r(display_featured_exhibits($exhibit));
-        }
-    ?>
+
+<?php if ((get_theme_option('Display Featured Exhibit') !== '0')
+        && plugin_is_active('ExhibitBuilder')): ?>
+    <h2><?php echo __('Featured Exhibits'); ?></h2>
+    <!-- Featured Exhibit -->
+    <?php $exhibits = exhibit_builder_recent_exhibits(3); ?>
+        <?php foreach ($exhibits as &$exhibit) {
+            print_r(display_featured_exhibits($exhibit));
+            }
+        ?>
+<?php endif; ?>
 
 </div> <!-- end featured bar -->
 
