@@ -2,11 +2,15 @@
 
 <div id="callout">
     <div id="video-intro">
+    <!--
         <iframe src="https://player.vimeo.com/video/69445362?portrait=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-<!--         <video controls autoplay muted> 
+    -->
+    <!--    
+        <video controls autoplay muted> 
             <source src="files/original/26835c8683f6afcef087fe7aa5a8c34e.mp4" type="video/mp4">
             Your browser does not support the video tag.
-        </video> -->
+        </video> 
+    -->
     </div>
 </div>
 
@@ -34,8 +38,8 @@
 </div>
 
 <div id="recent-items">
-    <h2><?php echo __('Featured Interviews'); ?></h2>
-    <?php echo random_featured_items(4); ?>
+    <h2><?php echo __('Featured Items'); ?></h2>
+    <?php echo random_featured_items(5); ?>
     <p class="view-items-link"><a class="action" href="<?php echo html_escape(url('items')); ?>"><?php echo __('View All Items'); ?></a></p>
 </div><!--end recent-items -->
 

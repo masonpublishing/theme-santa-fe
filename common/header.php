@@ -22,7 +22,7 @@
 
     <!-- Stylesheets -->
     <?php
-    queue_css_file(array('iconfonts', 'style'));
+    queue_css_file(array('iconfonts', 'style', 'booknotes'));
     echo head_css();
     ?>
 
