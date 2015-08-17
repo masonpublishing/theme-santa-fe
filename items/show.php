@@ -2,34 +2,29 @@
 
 <h1><?php echo metadata('item', array('Dublin Core', 'Title')); ?></h1>
     <div id="multi-column-body">
-        <div id="viewer-block">
-            <?php if (metadata('item', array('Item Type Metadata', 'Player'))): ?> 
-                <div class="item-player">
-                    <?php echo metadata('item', array('Item Type Metadata', 'Player')); ?>
-                </div>
-                <div id="transcription-window" class="element">
-                    <p><?php echo metadata('item', array('Item Type Metadata', 'Transcription')); ?></p>
-                </div>
-            <?php elseif (metadata('item', array('Item Type Metadata', 'Text'))): ?>
-                <?php fire_plugin_hook('public_items_show', array('view' => $this, 'item' => $item)); ?>
-                <div id="transcription-window" class="element">
-                    <h3><?php echo __('Annotations'); ?></h3>
-                    <?php echo metadata('item', array('Item Type Metadata', 'Text')); ?>
-                </div>
-            <?php else: ?>
-                <?php if (metadata('item', 'has files')): ?>
-                    <?php echo files_for_item(array('imageSize' => 'fullsize', 'imgAttributes' => array('class' => 'fullsize-image'))); ?>
-                <?php endif; ?>
-            <?php endif; ?>
-
-        </div>
-
-        <div id="metadata-bar">
-            <?php echo all_element_texts('item', array('show_element_sets' => 'Dublin Core')); ?>
-        </div>
 
         <div id="main-block">
+            <div id="viewer-block">
+                <?php if (metadata('item', array('Item Type Metadata', 'Player'))): ?> 
+                    <div class="item-player">
+                        <?php echo metadata('item', array('Item Type Metadata', 'Player')); ?>
+                    </div>
+                    <div id="transcription-window" class="element">
+                        <p><?php echo metadata('item', array('Item Type Metadata', 'Transcription')); ?></p>
+                    </div>
+                <?php elseif (metadata('item', array('Item Type Metadata', 'Text'))): ?>
+                    <?php fire_plugin_hook('public_items_show', array('view' => $this, 'item' => $item)); ?>
+                    <div id="transcription-window" class="element">
+                        <h3><?php echo __('Annotations'); ?></h3>
+                        <?php echo metadata('item', array('Item Type Metadata', 'Text')); ?>
+                    </div>
+                <?php else: ?>
+                    <?php if (metadata('item', 'has files')): ?>
+                        <?php echo files_for_item(array('imageSize' => 'fullsize', 'imgAttributes' => array('class' => 'fullsize-image'))); ?>
+                    <?php endif; ?>
+                <?php endif; ?>
 
+            </div>
             <!-- The following prints a citation for this item. -->
             <div id="item-citation" class="element">
                 <h3><?php echo __('Citation'); ?></h3>
@@ -63,6 +58,10 @@
                 <h3><?php echo __('Output Formats'); ?></h3>
                 <div class="element-text"><?php echo output_format_list(); ?></div>
             </div>
+        </div>
+
+        <div id="metadata-bar">
+            <?php echo all_element_texts('item', array('show_element_sets' => 'Dublin Core')); ?>
         </div>
     </div>
 <nav>

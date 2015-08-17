@@ -12,7 +12,7 @@
 
 <div id="featured-bar">
 
-<?php if ((get_theme_option('Display Featured Exhibit') !== '0')
+<?php if ((get_theme_option('Display Featured Exhibit') <= '3')
         && plugin_is_active('ExhibitBuilder')): ?>
     <h2><?php echo __('Featured Exhibits'); ?></h2>
     <!-- Featured Exhibit -->

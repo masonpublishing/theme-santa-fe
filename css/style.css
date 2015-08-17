@@ -593,6 +593,7 @@ th {
     box-shadow: -3px -3px 0 rgba(0, 0, 0, 0.2), -6px -6px 0 rgba(0, 0, 0, 0.1);
   }
 
+  .items .fullsize-image,
   .collection .image img,
   .exhibit .image img {
     -moz-box-shadow: -3px -3px 0 rgba(0, 0, 0, 0.2), -6px -6px 0 rgba(0, 0, 0, 0.1);
@@ -1294,12 +1295,6 @@ th {
     -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, 0.5);
   }
 
-  #main-block {
-    margin-top: 1.5em;
-    padding-top: 0em;
-    padding-bottom: 0em;
-    margin-bottom: 1.5em;
-  }
   #main-block #itemfiles {
     display: block;
     overflow: auto;
@@ -1419,7 +1414,7 @@ th {
   .exhibit-block {
     overflow: hidden;
     font-size: 14px;
-    line-height: 28px;
+    line-height: 22px;
   }
   .exhibit-block .exhibit-items {
     max-width: 30%;
@@ -1653,6 +1648,38 @@ th {
     margin: 0 0 0.75em;
   }
 
+  /* Item Page */
+  #multi-column-body {
+    margin-top: 1.5em;
+    padding-top: 0em;
+    padding-bottom: 0em;
+    margin-bottom: 1.5em;
+  }
+
+  #viewer-block {
+    margin-bottom: 1.5em;
+    width: 100%;
+    overflow: auto;
+  }
+
+  #metadata-bar {
+    width: 32.20339%;
+    float: right;
+    margin-right: 0;
+    *margin-left: -1em;
+    display: inline;
+    -moz-box-shadow: 0px 0px 5px #333333;
+    -webkit-box-shadow: 0px 0px 5px #333333;
+    box-shadow: 0px 0px 5px #333333;
+  }
+
+  #main-block {
+    width: 66.10169%;
+    float: left;
+    margin-right: 1.69492%;
+    display: inline;
+  }
+
   /* Index Page */
   #callout {
     width: 100%;
@@ -1764,42 +1791,9 @@ th {
     text-align: center;
   }
 
-  #viewer-block {
-    margin-bottom: 1.5em;
-    width: 66.10169%;
-    float: left;
-    margin-right: 1.69492%;
-    display: inline;
-  }
-
   iframe {
     width: 100%;
     min-height: 350px;
-  }
-
-  #multi-column-body {
-    margin-top: 1.5em;
-    padding-top: 0em;
-    padding-bottom: 0em;
-    margin-bottom: 1.5em;
-  }
-
-  #metadata-bar {
-    width: 32.20339%;
-    float: right;
-    margin-right: 0;
-    *margin-left: -1em;
-    display: inline;
-    -moz-box-shadow: 0px 0px 5px #333333;
-    -webkit-box-shadow: 0px 0px 5px #333333;
-    box-shadow: 0px 0px 5px #333333;
-  }
-
-  #main-block {
-    width: 66.10169%;
-    float: left;
-    margin-right: 1.69492%;
-    display: inline;
   }
 
   /*#intro {

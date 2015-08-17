@@ -176,7 +176,7 @@ body {
         height: auto;
         @include box-shadow(-3px -3px 0 rgba(0,0,0,.2), -6px -6px 0 rgba(0,0,0,.1));
     }
-    
+    .items .fullsize-image,
     .collection .image img,
     .exhibit .image img {
         @include box-shadow(-3px -3px 0 rgba(0,0,0,.2), -6px -6px 0 rgba(0,0,0,.1));
@@ -772,7 +772,6 @@ body {
     }
 
     #main-block {
-        @include rhythm();
         #itemfiles {
             display: block;
             overflow: auto;
@@ -885,7 +884,7 @@ body {
     .exhibit-block {
         overflow: hidden;
         font-size: 14px;
-        line-height: 28px;
+        line-height: 22px;
 
         .exhibit-items {
             max-width: 30%;

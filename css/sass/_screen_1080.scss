@@ -12,29 +12,12 @@ body {
     text-align: center
 }
 
-#viewer-block {
-    @include trailer();
-    @include span-columns(8 alpha, 12);
-}
-
 iframe {
     width: 100%;
     min-height: 350px;	
 }
 
-#multi-column-body {
-	@include rhythm();
-}
 
-#metadata-bar {
-	@include span-columns(4 omega, 12);
-    @include box-shadow();
-}
-
-
-#main-block {
-	@include span-columns(8 alpha, 12);
-}
 /*#intro {
     @include span-columns(4 omega, 12);
 }*/

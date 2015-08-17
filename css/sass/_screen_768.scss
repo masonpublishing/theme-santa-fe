@@ -170,7 +170,23 @@ div#search-container {
 .pagination {
     margin: 0 0 rhythm(.5);
 }
+/* Item Page */
+#multi-column-body {
+    @include rhythm();
+}
+#viewer-block {
+    @include trailer();
+    width: 100%;
+    overflow: auto;
+}
+#metadata-bar {
+    @include span-columns(4 omega, 12);
+    @include box-shadow();
+}
 
+#main-block {
+    @include span-columns(8 alpha, 12);
+}
 /* Index Page */
 
 #callout {
