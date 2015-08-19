@@ -270,4 +270,15 @@ div#search-container {
 
 .item-description {clear:none}
 
+/* Exhibit Pages */
+.exhibits.summary #primary,
+    .exhibits #content > h1:first-of-type,
+    #exhibit-blocks,
+    #exhibit-page-navigation {
+        @include span-columns(8 alpha);
+    }
+
+     #exhibit-pages {
+        @include span-columns(3 omega);
+        }   
 

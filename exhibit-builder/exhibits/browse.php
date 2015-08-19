@@ -31,7 +31,7 @@ echo head(array('title' => $title, 'bodyclass' => 'exhibits browse'));
         <?php if ($exhibitDescription = metadata('exhibit', 'description', array('no_escape' => true))): ?>
         <div class="description"><?php echo $exhibitDescription; ?></div>
         <?php endif; ?>
-        <?php if ($exhibitTags = tag_string('exhibit', 'exhibits')): ?>
+        <?php if ($exhibitTags = tag_string('exhibit', 'items/browse')): ?>
         <p class="tags"><?php echo $exhibitTags; ?></p>
         <?php endif; ?>
     </div>
