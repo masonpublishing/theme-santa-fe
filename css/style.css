@@ -458,6 +458,7 @@ th {
   h3 {
     font-size: 18px;
     margin-bottom: 1em;
+    font-weight: 300;
   }
 
   p, ul, ol, dl {

@@ -57,6 +57,7 @@ body {
     h3 {
         font-size: 1.5 * $base-font-size;
         @include trailer(1, 1.5 * $base-font-size);
+        font-weight: 300;
     }
     
     p, ul, ol, dl {
