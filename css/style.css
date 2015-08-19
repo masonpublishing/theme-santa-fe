@@ -1334,6 +1334,7 @@ th {
     overflow: hidden;
     font-size: 14px;
     line-height: 24px;
+    margin-bottom: 1.5em;
   }
   .exhibit-block .exhibit-items {
     max-width: 30%;
@@ -1361,13 +1362,6 @@ th {
   }
   #exhibit-pages ul {
     margin: 0;
-  }
-  #exhibit-pages ~ * {
-    width: 74.57627%;
-    float: left;
-    margin-right: 1.69492%;
-    display: inline;
-    clear: left;
   }
   #exhibit-pages ul ul,
   #exhibit-pages .child-pages {
@@ -1422,10 +1416,10 @@ th {
     /*@extend h4;*/
   }
 
-  .exhibit-block > *:last-child {
-    margin-bottom: 0;
-  }
-
+  /*    
+      .exhibit-block > *:last-child {
+          margin-bottom: 0;
+      }*/
   /* Collections Pages */
   .show.collections .element {
     margin-bottom: 1.5em;
@@ -1789,6 +1783,13 @@ th {
     margin-right: 0;
     *margin-left: -1em;
     display: inline;
+  }
+  #exhibit-pages ~ * {
+    width: 74.57627%;
+    float: left;
+    margin-right: 1.69492%;
+    display: inline;
+    clear: left;
   }
 }
 @media screen and (min-width: 1080px) {

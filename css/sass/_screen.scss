@@ -813,6 +813,7 @@ body {
         overflow: hidden;
         font-size: 14px;
         line-height: 24px;
+        @include trailer();
 
         .exhibit-items {
             max-width: 30%;
@@ -843,11 +844,6 @@ body {
         @include trailing-border(1px, 1, $base-font-size, solid);*/
         
         ul { margin: 0;}
-        
-        & ~ * {
-            @include span-columns(9 alpha);
-            clear: left;
-        }
         
         ul ul,
         .child-pages {
@@ -900,10 +896,10 @@ body {
         }
     }
  
-    
+/*    
     .exhibit-block > *:last-child {
         margin-bottom: 0;
-    }
+    }*/
     
     /* Collections Pages */    
     

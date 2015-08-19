@@ -280,5 +280,10 @@ div#search-container {
 
      #exhibit-pages {
         @include span-columns(3 omega);
-        }   
+
+         & ~ * {
+            @include span-columns(9 alpha);
+            clear: left;
+        }
+    }   
 
