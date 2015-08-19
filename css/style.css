@@ -1411,9 +1411,14 @@ th {
   #exhibit-pages > ul > li.current li {
     display: block;
   }
-  #exhibit-pages .nav-block .tags a {
+  #exhibit-pages .tags a {
     display: block;
+    margin-bottom: 1em;
     /*@extend h4;*/
+  }
+  #exhibit-pages .tags a:before {
+    margin-right: 2px;
+    content: "\203A";
   }
 
   /*    

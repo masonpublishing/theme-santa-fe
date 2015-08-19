@@ -887,12 +887,15 @@ body {
                 display: block;
             }
         }
+        .tags a {
+            display: block;
+            margin-bottom: 1em;
 
-        .nav-block {
-            .tags a{
-                display: block;
-                /*@extend h4;*/
+            &:before {
+                margin-right: 2px;
+                content:"\203A";
             }
+            /*@extend h4;*/
         }
     }
  
