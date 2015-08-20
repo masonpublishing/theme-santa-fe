@@ -816,14 +816,8 @@ body {
         line-height: 24px;
         @include trailer();
 
-        .exhibit-items {
-            max-width: 30%;
-
-            img {
-                /*border: 1px solid $link-accent;*/
-                max-width: 150px;
-                box-shadow: 0px 0px 5px 1px rgba(0,0,0,.2);
-            }
+        .exhibit-items img {
+            box-shadow: 0px 0px 5px 1px rgba(0,0,0,.2);
         }
 
         p {
