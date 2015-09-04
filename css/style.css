@@ -1459,6 +1459,26 @@ th {
     color: #ECECEA;
   }
 
+  #footer-image img {
+    max-width: 100%;
+  }
+
+  #footer-info {
+    overflow: auto;
+  }
+
+  #footer-attribution {
+    overflow: auto;
+  }
+  #footer-attribution img {
+    max-width: 80px;
+    float: left;
+  }
+  #footer-attribution p {
+    margin: 0;
+    padding-top: 2em;
+  }
+
   /* == Recaptcha == */
   #recaptcha_area input {
     min-height: 0;
@@ -1609,6 +1629,20 @@ th {
 
   #footer {
     margin: 0 7.14286%;
+  }
+
+  #custom-footer-text {
+    width: 50%;
+    float: left;
+  }
+
+  #footer-image {
+    width: 50%;
+    float: left;
+  }
+  #footer-image img {
+    max-height: 100px;
+    float: right;
   }
 
   #content {

@@ -147,7 +147,19 @@ div#search-container {
 #footer {
     margin: 0 gutter(3);
 }
+#custom-footer-text {
+    width: 50%;
+    float:left;
+}
+#footer-image {
+    width: 50%;
+    float:left;
 
+    img {
+        max-height: 100px;
+        float: right;
+    }
+}
 #content {
      padding: rhythm(2) $gutter-width;
 }

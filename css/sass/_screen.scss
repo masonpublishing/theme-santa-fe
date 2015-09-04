@@ -924,6 +924,24 @@ body {
 #footer a {color:$grey;}
 #footer p {color:$grey;}
 
+#footer-image img{
+    max-width: 100%;
+}
+#footer-info {
+    overflow: auto;
+}
+
+#footer-attribution {
+    overflow: auto;
+    img{
+        max-width: 80px;
+        float: left;
+    }
+    p {
+        margin:0;
+        padding-top: 2em;
+    }
+}
 /* == Recaptcha == */
 
 #recaptcha_area input {
